@@ -1,0 +1,62 @@
+$font2: "Lexend Zetta", sans-serif;
+$color: #F07C52;
+
+@mixin flex($jc) {
+  display: flex;
+  justify-content: $jc;
+  align-items: center;
+}
+
+@mixin title {
+  font-family: $font2;
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 64px;
+  letter-spacing: -12px;
+
+  @media (max-width: 768px) {
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: -8px;
+  }  
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.body__wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 135px;
+  margin: 0 auto;
+
+  @media (max-width: 1439px) {
+    padding: 0 75px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 0 50px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 30px;
+  }
+
+  @media (max-width: 510px) {
+    padding: 0 15px;
+  }
+}

@@ -1,0 +1,126 @@
+.tours {
+  margin-bottom: 190px;
+  padding-top: 0;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 120px;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 70px;
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    opacity: 0.5;
+    padding-top: 74px;
+    margin-bottom: 33px;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+      padding-top: 50px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 510px) {
+      padding-top: 30px;
+    }
+  }
+
+  &__title {
+    @include title;
+    max-width: 653px;
+    margin-bottom: 70px;
+
+    @media (max-width: 768px) {
+      max-width: 383px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__cards {
+    @include flex(center);
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 64px;
+  }
+
+  &__item {
+    width: 270px;
+    height: 352px;
+    background-color: #FFF2F2;
+    transition: scale 0.4s, color 0.4s, background-color 0.4s;
+
+    &:hover {
+      scale: 1.1;
+      color: #FFF;
+      background-color: #6347F9;
+    }
+  }
+
+  &__item__citi {
+    font-size: 20px;
+    padding: 24px 0 0 32px;
+    margin-bottom: 7px;
+  }
+
+  &__item__data {
+    font-size: 14px;
+    line-height: 24px;
+    opacity: 0.5;
+    padding-left: 32px;
+    margin-bottom: 18px;
+  }
+
+  &__item__price {
+    font-family: $font2;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -8px;
+    padding-left: 32px;
+    margin-bottom: 23px;
+  }
+}
+
+// Акордеон
+
+.accord {
+  &__wrapper {
+    height: 0;
+    // max-height: 0;
+    overflow: hidden;
+    transition: 0.5s ease;
+    position: relative;
+  }
+
+  &_active &__wrapper {
+    // max-height: 100vh;
+    height: auto;
+  }
+
+  &__btn {
+    width: 170px;
+    height: 48px;
+    font-family: $font2;
+    line-height: 20px;
+    letter-spacing: -3px;
+    color: #F07C52;
+    background-color: #FFF;
+    text-transform: uppercase;
+    border: 1px solid #F07C5280;
+    box-shadow: 0 0 5px #F07C52;
+    transition: 0.2s;
+    position: relative;
+    left: calc(50% - 85px);
+
+    &:hover {
+      color: #FFF;
+      background-color: #F07C52;
+    }
+
+    &:active {
+      position: relative;
+      top: 1px;
+    }
+  }
+}

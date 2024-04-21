@@ -1,0 +1,112 @@
+.hero {
+  max-height: 840px;
+  margin-top: -1px;
+  margin-bottom: 80px;
+
+  &__wrapper {
+    background-color: #6347F9;
+  }
+
+  @media (max-width: 1024px) {
+    max-height: 780px;
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: 768px) {
+    max-height: 740px;
+  }
+
+  @media (max-width: 510px) {
+    max-height: 650px;
+  }
+
+  &__container {
+    text-align: center;
+    text-align: -webkit-center;
+  }
+
+  &__text {
+    color: #FFF;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 19px;
+  }
+
+  &__title {
+    max-width: 948px;
+    font-family: $font2;
+    font-size: 72px;
+    line-height: 80px;
+    font-weight: 400;
+    letter-spacing: -14px;
+    color: #FFF;
+    padding-bottom: 307px;
+
+    @media (max-width: 1024px) {
+      max-width: 720px;
+      font-size: 52px;
+      line-height: 60px;
+      letter-spacing: -8px;
+      padding-bottom: 250px;
+    }
+
+    @media (max-width: 768px) {
+      max-width: 455px;
+      font-size: 36px;
+      line-height: 40px;
+    }
+
+    @media (max-width: 510px) {
+      font-size: 26px;
+      line-height: 28px;
+      letter-spacing: -6px;
+      padding-bottom: 220px;
+    }
+  }
+}
+
+.hero-swiper__container {
+  max-width: 1440px;
+  height: 470px;
+  position: relative;
+  bottom: 173px;
+  margin: 0 auto;
+
+  figure {
+    text-align: center;
+  }
+
+  img {
+    height: revert-layer;
+  }
+
+  .header__figcaption {
+    font-size: 14px;
+    line-height: 24px;
+    opacity: 0.5;
+  }
+
+  .swiper-pagination {
+    display: none;
+
+    @media (max-width: 1439px) {
+      display: block;
+    }
+  }
+}
+
+// Выключить слайдер
+.hero {
+  .swiper, .swiper-wrapper, .swiper-slide {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: auto;
+
+    @media (min-width: 1440px) {
+      pointer-events: none;
+    }
+  }
+}
