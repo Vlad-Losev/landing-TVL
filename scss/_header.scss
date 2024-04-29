@@ -52,7 +52,7 @@
       font-size: 16px;
       line-height: 40px;
       margin-bottom: 11px;
-      }
+    }
 
     .header__item {
       transition: 0.2s;
@@ -62,10 +62,6 @@
         @media (max-width: 825px) {
           margin-bottom: 30px;
         }
-      }
-
-      @media (max-width: 825px) {
-
       }
 
       &:hover {

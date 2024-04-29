@@ -23,6 +23,14 @@ document.body.addEventListener('click', event => {
   document.querySelector(".header").classList.remove("open")
 });
 
+// Закрыть меню при клике по содержимому меню
+window.addEventListener('click', e => {
+  const target = e.target;
+  if (target.closest('.header__item')) {
+    document.querySelector('.header').classList.remove('open')
+  }
+})
+
 // Слайдер-1
 const slider1 = new Swiper('.slider1', {
   direction: 'horizontal',
